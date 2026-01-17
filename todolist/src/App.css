@@ -1,0 +1,214 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create_form input {
+  width: 300px;
+  padding: 10px;
+  border-bottom: 2px solid;
+  outline: none;
+}
+
+.create_form button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  width: 345px;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  height: 35px;
+  padding: 2px, 5px, 2px, 5px;
+  margin-top: 2px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox .icon {
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.task div span {
+  margin: 0px 5px 0px 4px;
+}
+
+.task div .icon {
+  cursor: pointer;
+}
+
+.line_through {
+  text-decoration: line-through;
+}
+
+/* Light Mode Background */
+.home.light {
+  background: linear-gradient(to right, #fceabb, #f8b500);
+  color: #333;
+  min-height: 100vh;
+  padding: 25px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Dark Mode Background */
+.home.dark {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f0f0f0;
+  min-height: 100vh;
+  padding: 25px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #ff6f61;
+}
+
+/* Floating circular theme button at top-right */
+.theme-btn-top {
+  position: fixed;
+  /* fixed position */
+  top: 20px;
+  /* distance from top */
+  right: 20px;
+  /* distance from right */
+  width: 50px;
+  height: 50px;
+  background-color: #ff6f61;
+  /* button color */
+  border: none;
+  border-radius: 50%;
+  /* circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, background-color 0.3s;
+  z-index: 1000;
+  /* on top */
+}
+
+.theme-btn-top:hover {
+  transform: scale(1.2);
+  background-color: #00c853;
+  /* hover color */
+}
+
+
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* smaller width */
+  gap: 15px;
+  /* reduced gap */
+  margin-top: 20px;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  /* smaller padding */
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* lighter shadow */
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+}
+
+.home.dark .task-card {
+  background-color: rgba(44, 62, 80, 0.7);
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* smaller gap */
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 1.2rem;
+  /* smaller icon */
+}
+
+.done-icon {
+  color: #00c853;
+}
+
+.pending-icon {
+  color: #ffab00;
+}
+
+.line_through {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 0.9rem;
+  /* smaller text */
+}
+
+.task-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* smaller gap */
+}
+
+.badge {
+  padding: 3px 8px;
+  /* smaller badge */
+  border-radius: 12px;
+  font-size: 0.7rem;
+  /* smaller font */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.badge-done {
+  background-color: #00c853;
+  color: white;
+}
+
+.badge-pending {
+  background-color: #ffab00;
+  color: white;
+}
+
+.delete-icon {
+  font-size: 1.1rem;
+  /* smaller delete icon */
+  color: #d50000;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.delete-icon:hover {
+  transform: scale(1.2);
+}
+
+.no-record {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.3rem;
+  /* slightly smaller */
+}
